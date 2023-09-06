@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Required permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Add other permissions if needed -->
+
+    <application
+        android:label="CameraX"
+        android:icon = "mipmap/ic_launcher">
+
+        <!-- Activities, services, or other configurations specific to your app -->
+        <activity
+            android:name=".MainActivity"
+            android:label="string/app_name"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ... Other activities or services specific to your app -->
+
+        <!-- OpenCV initialization configuration -->
+        <meta-data
+            android:name="org.opencv.engine.OpenCVEngineInterface"
+            android:value="org.opencv.engine.OpenCVEngineInterface$EngineService" />
+    </application>
+</manifest>
